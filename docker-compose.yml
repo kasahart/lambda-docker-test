@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  lambda:
+    build:
+      context: .
+      dockerfile: DockerfileDev
+    volumes:
+      - ./work:/var/task/work
+    ports:
+      - "9000:8080"
+    platform: linux/amd64
